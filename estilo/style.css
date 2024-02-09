@@ -42,7 +42,7 @@ section#login{
     transform: translate(-50%, -50%); /*ajusta a centralização do position: absolute*/
     background-color: #cd7f32;
     width: 250px;
-    height: 400px;
+    height: 415px;
     border-radius: 20px;
     box-shadow: 0px 0px 10px #633d17;
     transition: width 0.3s, height 0.3s; /*altera a velocidade da transição do viewport de celular 
@@ -56,7 +56,7 @@ section#login > div#imagem{
     background-color: #b7410e;
     background-image: url(../imagens/fachada1.jpg);
     background-size: cover;
-    height: 180px;
+    height: 150px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
@@ -68,17 +68,79 @@ section#login > div#formulario{
 
 div#formulario > h1{
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 div#formulario > p{
-    font-size: 0.8em;
+    font-size: 0.7em;
+    margin-bottom: 5px;
 }
+ form > div.campo{
+    background-color: #633d17;
+    display: block;
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    margin: 5px 0px;
+ }
+
+ /*essa ação tira os nomes login e senha*/
+ div.campo > label{
+    display: none;
+ }
 
 div.campo > label{
     font-size: 0.7em;
 }
 
-a{
+div.campo > input[type=email]{
+    background-color: #cea882;
+    width: 150px;
+    font-weight: bold;
+}
+
+div.campo > input[type=password]{
+    background-color: #cea882;
+    width: 150px;
+    font-weight: bold;
+}
+
+form > input[type=submit]{
+    display: block; /*coloca o Entrar e Esqueci em coluna, um embaixo do outro*/
+    width: 100%; /*não pode ser vw, pois ocupara o viewport, o % ocupará apenas o form*/
+    height: 25px;
+    background-color: #cf955b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+form > input[type=submit]:hover{
+   background-color: #633d17;
+   color: #ccb8a2;
+}
+
+form > a.botao{
+    display: block;
+    text-align: center;
     font-size: 0.7em;
+    width: 100%;
+    height: 25px;
+    background-color: #d8a675;
+    color: #633d17;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+form > a.botao > span{
+    font-size: 1.2em;
+    margin-top: 5px;
+} 
+
+form > a.botao:hover{
+    background-color: #633d17;
+    color: #ccb8a2;
 }
