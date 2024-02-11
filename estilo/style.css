@@ -39,7 +39,6 @@ section#login{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /*ajusta a centralização do position: absolute*/
     background-color: #cd7f32;
     width: 250px;
     height: 415px;
@@ -48,6 +47,7 @@ section#login{
     transition: width 0.3s, height 0.3s; /*altera a velocidade da transição do viewport de celular 
     para tabelt, para Desktop e Telas Grandes*/
     transition-timing-function: ease; /*auxilia o TRANSITION*/
+    transform: translate(-50%, -50%); /*ajusta a centralização do position: absolute*/
     /*overflow: hidden; ai não precisa colocar border-top-left and right radius*/
 }
 
@@ -93,27 +93,60 @@ div.campo > label{
     font-size: 0.7em;
 }
 
+div.campo > span{
+    color: #ccb8a2;
+    width: 30px;
+    padding-left: 5px;
+    padding-top: 10px;
+}
+
+div.campo > input:focus-within{
+    background-color: white;
+}
+
 div.campo > input[type=email]{
     background-color: #cea882;
-    width: 150px;
+    border: 2px solid #633d17;
+    width: calc(100% - 35px); 
+    height: 39px;
     font-weight: bold;
+    border-radius: 6px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    padding: 4px;
+    transform: translateY(-9px); /*deve vir sempre na última linha*/
 }
 
 div.campo > input[type=password]{
     background-color: #cea882;
-    width: 150px;
+    border: 2px solid #633d17;
+    width: calc(100% - 35px);
+    height: 39px;
     font-weight: bold;
+    border-radius: 6px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    padding: 4px;
+    transform: translateY(-9px); /*deve sempre vir na última linha */
+}
+
+div.campo > input[type=email]:focus-within{
+    background-color: white;
+}
+
+div.campo > input[type=password]:focus-within{
+    background-color: white;
 }
 
 form > input[type=submit]{
     display: block; /*coloca o Entrar e Esqueci em coluna, um embaixo do outro*/
     width: 100%; /*não pode ser vw, pois ocupara o viewport, o % ocupará apenas o form*/
-    height: 25px;
+    height: 30px;
     background-color: #cf955b;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 form > input[type=submit]:hover{
@@ -126,7 +159,7 @@ form > a.botao{
     text-align: center;
     font-size: 0.7em;
     width: 100%;
-    height: 25px;
+    height: 30px;
     background-color: #d8a675;
     color: #633d17;
     font-weight: bold;
